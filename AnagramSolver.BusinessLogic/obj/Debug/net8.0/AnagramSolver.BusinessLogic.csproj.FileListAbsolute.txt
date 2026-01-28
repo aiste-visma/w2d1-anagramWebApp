@@ -1,0 +1,15 @@
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.BusinessLogic.deps.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.BusinessLogic.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.BusinessLogic.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.Contracts.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.Contracts.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.AssemblyInfo.cs
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramS.4022F06B.Up2Date
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\refint\AnagramSolver.BusinessLogic.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\ref\AnagramSolver.BusinessLogic.dll
