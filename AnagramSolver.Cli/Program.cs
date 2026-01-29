@@ -22,7 +22,7 @@ while (true)
     }
     else
     {
-        Console.WriteLine($"Žodžiai turi būti bent {settings.MinInputLength} raidžių ilgio.");
+        Console.WriteLine($"Sakinys turi būti bent {settings.MinInputLength} simbolių ilgio.");
     }
 }
 

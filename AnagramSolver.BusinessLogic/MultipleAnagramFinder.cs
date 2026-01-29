@@ -11,11 +11,11 @@ namespace AnagramSolver.BusinessLogic
     {
         private List<string> dictionary;
 
-        public MultipleAnagramFinder(IWordRepository zodynas)
+        public MultipleAnagramFinder(IWordRepository repo)
         {
 
             dictionary = new List<string>();
-            foreach (string word in zodynas.GetDictionary())
+            foreach (string word in repo.GetDictionary())
             {
                 dictionary.Add(word.ToLower());
             }

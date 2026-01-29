@@ -9,3 +9,4 @@ C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Contracts\ob
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Contracts\obj\Debug\net8.0\refint\AnagramSolver.Contracts.dll
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Contracts\obj\Debug\net8.0\AnagramSolver.Contracts.pdb
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Contracts\obj\Debug\net8.0\ref\AnagramSolver.Contracts.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Contracts\obj\Debug\net8.0\AnagramSolver.Contracts.sourcelink.json

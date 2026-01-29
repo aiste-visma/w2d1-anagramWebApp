@@ -20,10 +20,10 @@ namespace AnagramSolver.BusinessLogic
 
         public IList<string> GetAnagrams(string userInput)
         {
-            IEnumerable<string> zodynas = wordRepository.GetDictionary();
+            IEnumerable<string> dictionary = wordRepository.GetDictionary();
 
             List<string> candidates = new();
-            foreach (string word in zodynas)
+            foreach (string word in dictionary)
             {
                 if (word.Length <= userInput.Length)
                 {
