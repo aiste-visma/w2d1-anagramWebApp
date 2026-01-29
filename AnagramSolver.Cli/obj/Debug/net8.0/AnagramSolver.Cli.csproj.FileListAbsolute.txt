@@ -20,3 +20,4 @@ C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Cli\obj\Debu
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Cli\obj\Debug\net8.0\AnagramSolver.Cli.genruntimeconfig.cache
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Cli\obj\Debug\net8.0\ref\AnagramSolver.Cli.dll
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Cli\bin\Debug\net8.0\zodynas.txt
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Cli\obj\Debug\net8.0\AnagramSolver.Cli.sourcelink.json
