@@ -112,9 +112,6 @@ namespace AnagramSolver.Tests
             var results = finder.GetAnagrams("klanas", 5);
 
             results.Should().Equal(new List<string> { "kalnas" });
-
         }
-
-
     }
 }

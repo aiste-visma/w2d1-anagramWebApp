@@ -36,8 +36,7 @@ namespace AnagramSolver.BusinessLogic
             foreach (string word in dictionary)
             {
                 //pridet nauja logika su min output ilgiu
-
-                if (bag.CanWordForm(word))
+                if (bag.CanWordForm(word) && word.Length >= minOutputWordLength)
                 {
                     filteredDic.Add(word);
                 }

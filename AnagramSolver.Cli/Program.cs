@@ -28,7 +28,7 @@ while (true)
 
 
 var solver = new MultipleAnagramFinder(zodynas);
-var anagrams = solver.GetAnagrams(userInput);
+var anagrams = solver.GetAnagrams(userInput, settings.MinOutputWordLength);
 
 
 int anagramCount = 0;
