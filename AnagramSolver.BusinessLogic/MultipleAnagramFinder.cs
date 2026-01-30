@@ -23,6 +23,11 @@ namespace AnagramSolver.BusinessLogic
 
         public IList<string> GetAnagrams(string userInput)
         {
+            var defaultMinOutputLength = 0;
+            return GetAnagrams(userInput, defaultMinOutputLength);
+        }
+        public IList<string> GetAnagrams(string userInput, int minOutputWordLength)
+        {
             LetterBag bag = new LetterBag(userInput);
             var currentSolution = new List<string>();
             var result = new List<string>();

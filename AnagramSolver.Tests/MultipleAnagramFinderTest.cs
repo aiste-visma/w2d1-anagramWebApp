@@ -105,6 +105,13 @@ namespace AnagramSolver.Tests
         [Fact]
         public void GetAnagrams_MinOutputWordLength5_FilteredAmagrams()
         {
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "kas", "lan", "rūkas" });
+
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var results = finder.GetAnagrams("klanas", 5);
+
+            results.Should().Equal(new List<string> { "kalnas" });
 
         }
 
