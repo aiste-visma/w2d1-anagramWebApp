@@ -87,6 +87,27 @@ namespace AnagramSolver.Tests
             result.Should().Equal(new List<string> { "kalnas" });
         }
 
+        //TDD
+        [Fact]
+        public void GetAnagrams_MinOutputWordLength0_AllAnagrams()
+        {
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "kas", "lan", "rūkas" });
+
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+
+            var result = finder.GetAnagrams("klanas", 0);
+
+            result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
+
+        }
+
+        [Fact]
+        public void GetAnagrams_MinOutputWordLength5_FilteredAmagrams()
+        {
+
+        }
+
 
     }
 }

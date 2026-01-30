@@ -24,12 +24,14 @@ namespace AnagramSolver.BusinessLogic
         public IList<string> GetAnagrams(string userInput)
         {
             LetterBag bag = new LetterBag(userInput);
-            List<string> currentSolution = new List<string>();
-            List<string> result = new List<string>();
+            var currentSolution = new List<string>();
+            var result = new List<string>();
 
-            List<string> filteredDic = new List<string>();
+            var filteredDic = new List<string>();
             foreach (string word in dictionary)
             {
+                //pridet nauja logika su min output ilgiu
+
                 if (bag.CanWordForm(word))
                 {
                     filteredDic.Add(word);
