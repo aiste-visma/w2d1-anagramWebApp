@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model AnagramViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Anagram finder app</h1>
+
+    <form asp-action="Index" method="get">
+    <input type="text" name="id" placeholder="Įveskite žodį" />
+    <button type="submit">Ieškoti</button>
+</form>
+
+
+    <ul>
+        @foreach (var anagram in Model.anagrams)
+        {
+            <li>@anagram</li>
+        }
+
+    </ul>
+    
+</div>

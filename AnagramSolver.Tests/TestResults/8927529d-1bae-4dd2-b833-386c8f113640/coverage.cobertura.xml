@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.8598" branch-rate="0.9704999999999999" version="1.9" timestamp="1770018967" lines-covered="92" lines-valid="107" branches-covered="33" branches-valid="34">
+  <sources>
+    <source>C:\Users\aiste.makutenaite\source\repos\anagramSolver\</source>
+  </sources>
+  <packages>
+    <package name="AnagramSolver.BusinessLogic" line-rate="0.8845999999999999" branch-rate="0.9704999999999999" complexity="39">
+      <classes>
+        <class name="AnagramSolver.BusinessLogic.LetterBag" filename="AnagramSolver.BusinessLogic\LetterBag.cs" line-rate="0.9791" branch-rate="0.95" complexity="21">
+          <methods>
+            <method name="CanWordForm" signature="(System.String)" line-rate="0.9166" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="30" hits="36" branch="False" />
+                <line number="31" hits="36" branch="False" />
+                <line number="33" hits="314" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="114" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="110" branch="False" />
+                <line number="35" hits="110" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="48" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="36" hits="14" branch="False" />
+                <line number="37" hits="96" branch="False" />
+                <line number="38" hits="96" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="95" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="96" branch="False" />
+                <line number="41" hits="22" branch="False" />
+                <line number="42" hits="36" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsEmpty" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="RemoveWord" signature="(System.String)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="47" hits="11" branch="False" />
+                <line number="48" hits="177" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="119" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="49" hits="48" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="36" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="48" branch="False" />
+                <line number="51" hits="48" branch="False" />
+                <line number="52" hits="48" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="89" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="39" branch="False" />
+                <line number="54" hits="39" branch="False" />
+                <line number="55" hits="39" branch="False" />
+                <line number="56" hits="48" branch="False" />
+                <line number="57" hits="48" branch="False" />
+                <line number="58" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="AddWord" signature="(System.String)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="61" hits="11" branch="False" />
+                <line number="62" hits="129" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="97" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="48" branch="False" />
+                <line number="64" hits="48" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="36" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="9" branch="False" />
+                <line number="67" hits="39" branch="False" />
+                <line number="68" hits="48" branch="False" />
+                <line number="69" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="11" hits="6" branch="False" />
+                <line number="13" hits="6" branch="False" />
+                <line number="14" hits="6" branch="False" />
+                <line number="15" hits="6" branch="False" />
+                <line number="16" hits="90" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="121" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="36" branch="False" />
+                <line number="18" hits="36" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="59" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="5" branch="False" />
+                <line number="20" hits="5" branch="False" />
+                <line number="21" hits="5" branch="False" />
+                <line number="23" hits="31" branch="False" />
+                <line number="24" hits="31" branch="False" />
+                <line number="25" hits="31" branch="False" />
+                <line number="26" hits="36" branch="False" />
+                <line number="27" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="36" branch="False" />
+            <line number="31" hits="36" branch="False" />
+            <line number="33" hits="314" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="114" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="34" hits="110" branch="False" />
+            <line number="35" hits="110" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="48" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="36" hits="14" branch="False" />
+            <line number="37" hits="96" branch="False" />
+            <line number="38" hits="96" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="95" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="96" branch="False" />
+            <line number="41" hits="22" branch="False" />
+            <line number="42" hits="36" branch="False" />
+            <line number="44" hits="17" branch="False" />
+            <line number="47" hits="11" branch="False" />
+            <line number="48" hits="177" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="119" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="49" hits="48" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="36" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="50" hits="48" branch="False" />
+            <line number="51" hits="48" branch="False" />
+            <line number="52" hits="48" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="89" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="39" branch="False" />
+            <line number="54" hits="39" branch="False" />
+            <line number="55" hits="39" branch="False" />
+            <line number="56" hits="48" branch="False" />
+            <line number="57" hits="48" branch="False" />
+            <line number="58" hits="11" branch="False" />
+            <line number="61" hits="11" branch="False" />
+            <line number="62" hits="129" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="97" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="63" hits="48" branch="False" />
+            <line number="64" hits="48" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="36" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="65" hits="9" branch="False" />
+            <line number="67" hits="39" branch="False" />
+            <line number="68" hits="48" branch="False" />
+            <line number="69" hits="11" branch="False" />
+            <line number="11" hits="6" branch="False" />
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="6" branch="False" />
+            <line number="15" hits="6" branch="False" />
+            <line number="16" hits="90" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="121" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="17" hits="36" branch="False" />
+            <line number="18" hits="36" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="59" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="19" hits="5" branch="False" />
+            <line number="20" hits="5" branch="False" />
+            <line number="21" hits="5" branch="False" />
+            <line number="23" hits="31" branch="False" />
+            <line number="24" hits="31" branch="False" />
+            <line number="25" hits="31" branch="False" />
+            <line number="26" hits="36" branch="False" />
+            <line number="27" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="AnagramSolver.BusinessLogic.LoadAppSettings" filename="AnagramSolver.BusinessLogic\LoadAppSettings.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="FromJson" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AnagramSolver.BusinessLogic.MultipleAnagramFinder" filename="AnagramSolver.BusinessLogic\MultipleAnagramFinder.cs" line-rate="1" branch-rate="1" complexity="15">
+          <methods>
+            <method name="GetAnagrams" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="4" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="4" branch="False" />
+                <line number="28" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="GetAnagrams" signature="(System.String,System.Int32)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="30" hits="6" branch="False" />
+                <line number="31" hits="6" branch="False" />
+                <line number="32" hits="6" branch="False" />
+                <line number="33" hits="6" branch="False" />
+                <line number="35" hits="6" branch="False" />
+                <line number="36" hits="60" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="103" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="21" branch="False" />
+                <line number="39" hits="21" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="60" type="jump" coverage="100%" />
+                    <condition number="82" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="9" branch="False" />
+                <line number="41" hits="9" branch="False" />
+                <line number="42" hits="9" branch="False" />
+                <line number="43" hits="21" branch="False" />
+                <line number="45" hits="6" branch="False" />
+                <line number="46" hits="6" branch="False" />
+                <line number="47" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="FindAnagrams" signature="(AnagramSolver.BusinessLogic.LetterBag,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;,System.Int32,System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="51" hits="17" branch="False" />
+                <line number="52" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="7" branch="False" />
+                <line number="54" hits="7" branch="False" />
+                <line number="55" hits="7" branch="False" />
+                <line number="56" hits="7" branch="False" />
+                <line number="59" hits="50" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="137" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="60" hits="15" branch="False" />
+                <line number="61" hits="15" branch="False" />
+                <line number="63" hits="15" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="63" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="4" branch="False" />
+                <line number="66" hits="11" branch="False" />
+                <line number="67" hits="11" branch="False" />
+                <line number="69" hits="11" branch="False" />
+                <line number="71" hits="11" branch="False" />
+                <line number="72" hits="11" branch="False" />
+                <line number="73" hits="11" branch="False" />
+                <line number="75" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(AnagramSolver.Contracts.IWordRepository)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="14" hits="7" branch="False" />
+                <line number="15" hits="7" branch="False" />
+                <line number="17" hits="7" branch="False" />
+                <line number="18" hits="63" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="67" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="21" branch="False" />
+                <line number="20" hits="21" branch="False" />
+                <line number="21" hits="21" branch="False" />
+                <line number="22" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="4" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="30" hits="6" branch="False" />
+            <line number="31" hits="6" branch="False" />
+            <line number="32" hits="6" branch="False" />
+            <line number="33" hits="6" branch="False" />
+            <line number="35" hits="6" branch="False" />
+            <line number="36" hits="60" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="103" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="37" hits="21" branch="False" />
+            <line number="39" hits="21" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="60" type="jump" coverage="100%" />
+                <condition number="82" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="40" hits="9" branch="False" />
+            <line number="41" hits="9" branch="False" />
+            <line number="42" hits="9" branch="False" />
+            <line number="43" hits="21" branch="False" />
+            <line number="45" hits="6" branch="False" />
+            <line number="46" hits="6" branch="False" />
+            <line number="47" hits="6" branch="False" />
+            <line number="51" hits="17" branch="False" />
+            <line number="52" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="7" branch="False" />
+            <line number="54" hits="7" branch="False" />
+            <line number="55" hits="7" branch="False" />
+            <line number="56" hits="7" branch="False" />
+            <line number="59" hits="50" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="137" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="60" hits="15" branch="False" />
+            <line number="61" hits="15" branch="False" />
+            <line number="63" hits="15" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="63" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="64" hits="4" branch="False" />
+            <line number="66" hits="11" branch="False" />
+            <line number="67" hits="11" branch="False" />
+            <line number="69" hits="11" branch="False" />
+            <line number="71" hits="11" branch="False" />
+            <line number="72" hits="11" branch="False" />
+            <line number="73" hits="11" branch="False" />
+            <line number="75" hits="17" branch="False" />
+            <line number="14" hits="7" branch="False" />
+            <line number="15" hits="7" branch="False" />
+            <line number="17" hits="7" branch="False" />
+            <line number="18" hits="63" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="67" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="19" hits="21" branch="False" />
+            <line number="20" hits="21" branch="False" />
+            <line number="21" hits="21" branch="False" />
+            <line number="22" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="AnagramSolver.BusinessLogic.WordRepository" filename="AnagramSolver.BusinessLogic\WordRepository.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="GetDictionary" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="AnagramSolver.Contracts" line-rate="0" branch-rate="1" complexity="3">
+      <classes>
+        <class name="AnagramSolver.Contracts.AppSettings" filename="AnagramSolver.Contracts\AppSettings.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_MaxAnagramCount" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MinInputLength" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MinOutputWordLength" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
