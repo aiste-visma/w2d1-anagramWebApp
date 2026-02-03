@@ -1,6 +1,7 @@
 using AnagramSolver.Contracts;
 using AnagramSolver.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
 namespace AnagramSolver.WebApp.Controllers
@@ -9,20 +10,25 @@ namespace AnagramSolver.WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IAnagramSolver _anagramSolver;
+        private readonly AppSettings _appSettings;
 
-        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver)
+        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver
+            , IOptions<AppSettings> options)
         {
             _logger = logger;
             _anagramSolver = anagramSolver;
+            _appSettings = options.Value;
         }
 
         public IActionResult Index(string? id)
         {
             var model = new AnagramViewModel();
+            string cleanId;
             if (!string.IsNullOrWhiteSpace(id))
             {
-                model.userInput = id;
-                model.anagrams = _anagramSolver.GetAnagrams(id).ToList();
+                cleanId = id.Replace(" ", "").ToLower();
+                model.userInput = cleanId;
+                model.anagrams = _anagramSolver.GetAnagrams(cleanId, _appSettings.MinOutputWordLength).ToList();
             }
             return View(model);
         }

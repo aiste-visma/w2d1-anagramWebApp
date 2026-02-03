@@ -9,6 +9,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
 builder.Services.AddScoped<IAnagramSolver, MultipleAnagramFinder>();
 
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,5 +31,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

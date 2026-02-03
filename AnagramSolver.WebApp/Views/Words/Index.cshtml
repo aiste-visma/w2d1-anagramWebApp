@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Dictionary";
+}
+
+@model PaginationViewModel;
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Word</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Index", "Home", new {id = item})">@item</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<nav aria-label="Page navigtion">
+    <ul class="pagination">
+            @if (Model.HasPrevious)
+            {
+                <li class="page-item">
+                    <a class="page-link" href ="?page=@(Model.CurrentPage-1)">Previous</a>
+                </li>
+            }
+        <li class="page-item">
+            <a class="page-link" href="?page=@(Model.CurrentPage+1)">Next</a>
+        </li>
+    </ul>
+</nav>
+
+
+<p></p>
