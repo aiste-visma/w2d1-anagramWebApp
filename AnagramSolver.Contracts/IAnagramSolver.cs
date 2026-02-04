@@ -8,7 +8,7 @@ namespace AnagramSolver.Contracts
 {
     public interface IAnagramSolver
     {
-        IList<string> GetAnagrams(string userInput);
-        IList<string> GetAnagrams(string userInput, int minOutputWordLength);
+        Task<IList<string>> GetAnagramsAsync(string userInput, CancellationToken ct);
+        Task<IList<string>> GetAnagramsAsync(string userInput, int minOutputWordLength, CancellationToken ct);
     }
 }

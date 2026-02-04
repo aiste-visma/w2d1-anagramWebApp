@@ -12,11 +12,13 @@ namespace AnagramSolver.WebApp.Controllers
         {
             _wordRepository = wordRepositroy;
         }
-        public IActionResult Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
         {
+            var cancellationToken = HttpContext.RequestAborted;
+
             var model = new PaginationViewModel();
             var pageSize = 100;
-            var allItems = _wordRepository.GetDictionary();
+            var allItems = await _wordRepository.GetDictionary(cancellationToken);
             var items = allItems.Skip((page - 1) * pageSize).Take(pageSize);
             int totalPages = allItems.Count() / pageSize;
 

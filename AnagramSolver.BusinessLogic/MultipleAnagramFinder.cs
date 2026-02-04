@@ -9,25 +9,22 @@ namespace AnagramSolver.BusinessLogic
 {
     public class MultipleAnagramFinder : IAnagramSolver
     {
-        private List<string> dictionary;
+        private IWordRepository _WordRepository;
 
         public MultipleAnagramFinder(IWordRepository repo)
         {
 
-            dictionary = new List<string>();
-            foreach (string word in repo.GetDictionary())
-            {
-                dictionary.Add(word.ToLower());
-            }
+            _WordRepository = repo;
         }
 
-        public IList<string> GetAnagrams(string userInput)
+        public async Task<IList<string>> GetAnagramsAsync(string userInput, CancellationToken ct)
         {
             var defaultMinOutputLength = 0;
-            return GetAnagrams(userInput, defaultMinOutputLength);
+            return await GetAnagramsAsync(userInput, defaultMinOutputLength, ct);
         }
-        public IList<string> GetAnagrams(string userInput, int minOutputWordLength)
+        public async Task<IList<string>> GetAnagramsAsync(string userInput, int minOutputWordLength, CancellationToken ct)
         {
+            var dictionary = await _WordRepository.GetDictionary(ct);
             LetterBag bag = new LetterBag(userInput);
             var currentSolution = new List<string>();
             var result = new List<string>();
@@ -35,20 +32,25 @@ namespace AnagramSolver.BusinessLogic
             var filteredDic = new List<string>();
             foreach (string word in dictionary)
             {
-                //pridet nauja logika su min output ilgiu
                 if (bag.CanWordForm(word) && word.Length >= minOutputWordLength)
                 {
                     filteredDic.Add(word);
                 }
             }
 
-            FindAnagrams(bag, currentSolution, filteredDic, 0, result);
+            FindAnagrams(bag, currentSolution, filteredDic, 0, result, ct);
             return result;
         }
 
 
-        private void FindAnagrams(LetterBag bag, List<string> solution, List<string> dict, int startIndex, List<string> results)
+        private void FindAnagrams(LetterBag bag, List<string> solution, 
+            List<string> dict, int startIndex, List<string> results, CancellationToken ct)
         {
+            if (ct.IsCancellationRequested)
+            {
+                return;
+            }
+
             if (bag.IsEmpty)
             {
                 string anagram = string.Join(" ", solution);
@@ -66,7 +68,7 @@ namespace AnagramSolver.BusinessLogic
                 bag.RemoveWord(word);
                 solution.Add(word);
 
-                FindAnagrams(bag, solution, dict, i, results);
+                FindAnagrams(bag, solution, dict, i, results, ct);
 
                 solution.RemoveAt(solution.Count - 1);
                 bag.AddWord(word);

@@ -20,7 +20,7 @@ namespace AnagramSolver.WebApp.Controllers
             _appSettings = options.Value;
         }
 
-        public IActionResult Index(string? id)
+        public async Task<IActionResult> Index(string? id, CancellationToken ct)
         {
             var model = new AnagramViewModel();
             string cleanId;
@@ -28,7 +28,7 @@ namespace AnagramSolver.WebApp.Controllers
             {
                 cleanId = id.Replace(" ", "").ToLower();
                 model.userInput = cleanId;
-                model.anagrams = _anagramSolver.GetAnagrams(cleanId, _appSettings.MinOutputWordLength).ToList();
+                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, _appSettings.MinOutputWordLength, ct)).ToList();
             }
             return View(model);
         }

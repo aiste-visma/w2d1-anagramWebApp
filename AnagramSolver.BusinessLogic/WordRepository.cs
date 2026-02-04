@@ -10,14 +10,15 @@ namespace AnagramSolver.BusinessLogic
 {
     public class WordRepository : IWordRepository
     {
-        private string[] dictionary;
-        public WordRepository(string zodynasPath)
+        private string dictionaryPath;
+        public WordRepository(string dicPath)
         {
-            dictionary = File.ReadAllLines(zodynasPath);
+            this.dictionaryPath = dicPath;
         }
 
-        public IEnumerable<string> GetDictionary()
+        public async Task<IEnumerable<string>> GetDictionary(CancellationToken ct)
         {
+            var dictionary = await File.ReadAllLinesAsync(dictionaryPath, ct);
             return dictionary;
         }
 
