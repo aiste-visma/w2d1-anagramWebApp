@@ -1,117 +1,110 @@
-﻿//using AnagramSolver.Contracts;
-//using AnagramSolver.BusinessLogic;
-//using FluentAssertions;
-//using Moq;
+﻿using AnagramSolver.Contracts;
+using AnagramSolver.BusinessLogic;
+using FluentAssertions;
+using Moq;
+using System.Threading.Tasks;
 
 
-//namespace AnagramSolver.Tests
-//{
-//    public class MultipleAnagramFinderTest
-//    {
-//        [Fact]
-//        public void Constructor_GetDictionaryOnce()
-//        {
-//            //arrange
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string>());
+namespace AnagramSolver.Tests
+{
+    public class MultipleAnagramFinderTest
+    {
+        [Fact]
+        public async Task GetAnagramsAsync_GetDictionaryOnce()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string>());
 
-//            //act
-//            var temp = new MultipleAnagramFinder(repositoryMock.Object);
+            var temp = new MultipleAnagramFinder(repositoryMock.Object);
+            await temp.GetAnagramsAsync("test", ct);
 
-//            //assert
-//            repositoryMock.Verify(r => r.GetDictionary(), Times.Once);
-//        }
+            repositoryMock.Verify(r => r.GetDictionary(ct), Times.Once);
+        }
 
-//        [Fact]
-//        public void GetAnagrams_OnePossibleAnagram_OneAnagram()
-//        {
-//            //arrange
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "berti", "rūkas" });
+        [Fact]
+        public async Task GetAnagrams_OnePossibleAnagram_OneAnagram()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "berti", "rūkas" });
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var result = await finder.GetAnagramsAsync("klanas", ct);
 
-//            //act
-//            var result = finder.GetAnagrams("klanas");
+            result.Should().Equal(new List<string> { "kalnas" });
 
-//            //assert
-//            result.Should().Equal(new List<string> { "kalnas"});
+        }
 
-//        }
+        [Fact]
+        public async Task GetAnagrams_NoAnagrams_EmptyResult()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "berti", "rūkas" });
 
-//        [Fact]
-//        public void GetAnagrams_NoAnagrams_EmptyResult()
-//        {
-//            //arrange
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> {"kalnas", "berti", "rūkas"});
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var result = await finder.GetAnagramsAsync("vienas", ct);
 
-//            //act
-//            var result = finder.GetAnagrams("vienas");
+            result.Should().BeEmpty();
+        }
 
-//            //assert
-//            result.Should().BeEmpty();
-//        }
+        [Fact]
+        public async Task GetAnagrams_MultipleAnagrams_CorrectAnagrams()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "kas", "lan", "rūkas" });
 
-//        [Fact]
-//        public void GetAnagrams_MultipleAnagrams_CorrectAnagrams()
-//        {
-//            //arrange
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "kas", "lan", "rūkas" });
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var result = await finder.GetAnagramsAsync("kalnas", ct);
 
-//            //act
-//            var result = finder.GetAnagrams("kalnas");
+            result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
+        }
 
-//            //assert
-//            result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
-//        }
+        [Fact]
+        public async Task GetAnagrams_InputUppercase_CorrectAnagram()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "berti", "rūkas" });
 
-//        [Fact]
-//        public void GetAnagrams_InputUppercase_CorrectAnagram()
-//        {
-//            //arrange
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "berti", "rūkas" });
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var result = await finder.GetAnagramsAsync("KLANAS", ct);
 
-//            //act
-//            var result = finder.GetAnagrams("KLANAS");
+            result.Should().Equal(new List<string> { "kalnas" });
+        }
 
-//            //assert
-//            result.Should().Equal(new List<string> { "kalnas" });
-//        }
+        //TDD
+        [Fact]
+        public async Task GetAnagrams_MinOutputWordLength0_AllAnagrams()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "kas", "lan", "rūkas" });
 
-//        //TDD
-//        [Fact]
-//        public void GetAnagrams_MinOutputWordLength0_AllAnagrams()
-//        {
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "kas", "lan", "rūkas" });
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var result = await finder.GetAnagramsAsync("klanas", 0, ct);
 
-//            var result = finder.GetAnagrams("klanas", 0);
+            result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
 
-//            result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
+        }
 
-//        }
+        [Fact]
+        public async Task GetAnagrams_MinOutputWordLength5_FilteredAmagrams()
+        {
+            var ct = CancellationToken.None;
+            var repositoryMock = new Mock<IWordRepository>();
+            repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "kas", "lan", "rūkas" });
 
-//        [Fact]
-//        public void GetAnagrams_MinOutputWordLength5_FilteredAmagrams()
-//        {
-//            var repositoryMock = new Mock<IWordRepository>();
-//            repositoryMock.Setup(r => r.GetDictionary()).Returns(new List<string> { "kalnas", "kas", "lan", "rūkas" });
+            var finder = new MultipleAnagramFinder(repositoryMock.Object);
+            var results = await finder.GetAnagramsAsync("klanas", 5, ct);
 
-//            var finder = new MultipleAnagramFinder(repositoryMock.Object);
-//            var results = finder.GetAnagrams("klanas", 5);
-
-//            results.Should().Equal(new List<string> { "kalnas" });
-//        }
-//    }
-//}
+            results.Should().Equal(new List<string> { "kalnas" });
+        }
+    }
+}
