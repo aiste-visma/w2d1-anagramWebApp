@@ -116,3 +116,6 @@ C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\De
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\AnagramSolver.WebApp.exe
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\AnagramSolver.WebApp.dll
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\AnagramSolver.WebApp.pdb
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cyy57VNlMvU=",
+  "dgSpecHash": "rFwVut2Zdr0=",
   "success": true,
   "projectFilePath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.options\\10.0.2\\microsoft.extensions.options.10.0.2.nupkg.sha512",
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.2\\microsoft.extensions.primitives.10.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

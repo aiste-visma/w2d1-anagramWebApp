@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6xlJXiNc7xA=",
+  "dgSpecHash": "WFeqUk79f+A=",
   "success": true,
   "projectFilePath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Cli\\AnagramSolver.Cli.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.options\\10.0.2\\microsoft.extensions.options.10.0.2.nupkg.sha512",
+    "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.2\\microsoft.extensions.primitives.10.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

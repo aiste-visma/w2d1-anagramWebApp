@@ -1,7 +1,11 @@
 ﻿using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts;
+using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Net.Http.Json;
 
 
 class Program {
@@ -30,19 +34,24 @@ class Program {
             }
         }
 
+        using var client = new HttpClient();
+        client.BaseAddress = new Uri("https://localhost:7037");
 
-        var solver = new MultipleAnagramFinder(zodynas);
-        var anagrams = await solver.GetAnagramsAsync(userInput, settings.MinOutputWordLength, CancellationToken.None);
+        var response = await client.GetAsync($"/api/anagrams/{userInput}");
+        response.EnsureSuccessStatusCode();
 
+        var json = await response.Content.ReadAsStringAsync();
+        var anagrams = JsonSerializer.Deserialize<List<string>>(json);
 
-        int anagramCount = 0;
-
-        foreach (var anagram in anagrams.Reverse())
-        {
-            Console.WriteLine(anagram);
-            if (anagramCount == settings.MaxAnagramCount)
+        var anagramCount = 0;
+        foreach (var anagram in anagrams)
+        { 
+            if (anagramCount >= settings.MaxAnagramCount)
                 break;
+            Console.WriteLine(anagram);
             anagramCount++;
         }
+        Console.WriteLine("Press Enter to exit...");
+        Console.ReadLine();
     }
 }

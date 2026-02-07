@@ -24,11 +24,11 @@ namespace AnagramSolver.Tests
             var logger = Mock.Of<ILogger<HomeController>>();
             var options = Options.Create(new AppSettings { MinOutputWordLength = 3 });
 
-            var controller = new HomeController(logger, anagramsMock.Object, options);
+            var controller = new HomeController(logger, anagramsMock.Object);
 
             await controller.Index("", ct);
 
-            anagramsMock.Verify(m => m.GetAnagramsAsync(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<CancellationToken>()), Times.Never);
+            anagramsMock.Verify(m => m.GetAnagramsAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
         }
 
         [Fact]
@@ -37,11 +37,11 @@ namespace AnagramSolver.Tests
             var ct = CancellationToken.None;
             var expectedAnagrams = new List<string> { "mala", "lama" };
             var anagramsMock = new Mock<IAnagramSolver>();
-            anagramsMock.Setup(s => s.GetAnagramsAsync("alma", 3, ct)).ReturnsAsync(expectedAnagrams);
+            anagramsMock.Setup(s => s.GetAnagramsAsync("alma", ct)).ReturnsAsync(expectedAnagrams);
             var logger = Mock.Of<ILogger<HomeController>>();
             var options = Options.Create(new AppSettings { MinOutputWordLength = 3 });
 
-            var controller = new HomeController(logger, anagramsMock.Object, options);
+            var controller = new HomeController(logger, anagramsMock.Object);
 
             var result = await controller.Index(" al ma ", ct);
 
@@ -51,7 +51,7 @@ namespace AnagramSolver.Tests
             Assert.Equal("alma", model.userInput);
             Assert.Equal(expectedAnagrams, model.anagrams);
 
-            anagramsMock.Verify(s => s.GetAnagramsAsync("alma", 3, ct), Times.Once);
+            anagramsMock.Verify(s => s.GetAnagramsAsync("alma", ct), Times.Once);
         }
 
         [Fact]
@@ -60,11 +60,11 @@ namespace AnagramSolver.Tests
             var ct = CancellationToken.None;
             var expectedAnagrams = new List<string>();
             var anagramsMock = new Mock<IAnagramSolver>();
-            anagramsMock.Setup(s => s.GetAnagramsAsync("kava", 3, ct)).ReturnsAsync(expectedAnagrams);
+            anagramsMock.Setup(s => s.GetAnagramsAsync("kava", ct)).ReturnsAsync(expectedAnagrams);
             var logger = Mock.Of<ILogger<HomeController>>();
             var options = Options.Create(new AppSettings { MinOutputWordLength = 3 });
 
-            var controller = new HomeController(logger, anagramsMock.Object, options);
+            var controller = new HomeController(logger, anagramsMock.Object);
 
             var result = await controller.Index("kava", ct);
 
@@ -74,7 +74,7 @@ namespace AnagramSolver.Tests
             Assert.Equal("kava", model.userInput);
             Assert.Equal(expectedAnagrams, model.anagrams);
 
-            anagramsMock.Verify(s => s.GetAnagramsAsync("kava", 3, ct), Times.Once);
+            anagramsMock.Verify(s => s.GetAnagramsAsync("kava", ct), Times.Once);
         }
     }
 }

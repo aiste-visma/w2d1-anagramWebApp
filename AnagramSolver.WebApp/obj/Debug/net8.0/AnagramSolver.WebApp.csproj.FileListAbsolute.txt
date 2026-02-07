@@ -40,3 +40,11 @@ C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\obj\D
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\obj\Debug\net8.0\AnagramS.9E2C3492.Up2Date
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\zodynas.txt
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.WebApp\obj\Debug\net8.0\AnagramSolver.WebApp.MvcApplicationPartsAssemblyInfo.cs

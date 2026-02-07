@@ -22,5 +22,10 @@ namespace AnagramSolver.BusinessLogic
             return dictionary;
         }
 
+        public async Task SaveDictionary(IEnumerable<string> words, CancellationToken ct)
+        {
+            await File.WriteAllLinesAsync(dictionaryPath, words, ct);
+        }
+
     }
 }

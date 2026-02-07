@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AnagramSolver.Contracts;
+using Microsoft.Extensions.Options;
+
 
 namespace AnagramSolver.BusinessLogic
 {
     public class MultipleAnagramFinder : IAnagramSolver
     {
         private IWordRepository _WordRepository;
+        private AppSettings _appSettings;
 
-        public MultipleAnagramFinder(IWordRepository repo)
+        public MultipleAnagramFinder(IWordRepository repo, IOptions<AppSettings> options)
         {
 
             _WordRepository = repo;
+            _appSettings = options.Value;
         }
 
         public async Task<IList<string>> GetAnagramsAsync(string userInput, CancellationToken ct)
-        {
-            var defaultMinOutputLength = 0;
-            return await GetAnagramsAsync(userInput, defaultMinOutputLength, ct);
-        }
-        public async Task<IList<string>> GetAnagramsAsync(string userInput, int minOutputWordLength, CancellationToken ct)
         {
             var dictionary = await _WordRepository.GetDictionary(ct);
             LetterBag bag = new LetterBag(userInput);
@@ -32,7 +31,7 @@ namespace AnagramSolver.BusinessLogic
             var filteredDic = new List<string>();
             foreach (string word in dictionary)
             {
-                if (bag.CanWordForm(word) && word.Length >= minOutputWordLength)
+                if (bag.CanWordForm(word) && word.Length >= _appSettings.MinOutputWordLength)
                 {
                     filteredDic.Add(word);
                 }

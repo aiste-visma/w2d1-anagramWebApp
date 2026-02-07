@@ -8,8 +8,11 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
 builder.Services.AddScoped<IAnagramSolver, MultipleAnagramFinder>();
-
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
@@ -19,6 +22,12 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

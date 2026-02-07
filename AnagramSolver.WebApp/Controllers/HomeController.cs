@@ -10,14 +10,11 @@ namespace AnagramSolver.WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IAnagramSolver _anagramSolver;
-        private readonly AppSettings _appSettings;
 
-        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver
-            , IOptions<AppSettings> options)
+        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver)
         {
             _logger = logger;
             _anagramSolver = anagramSolver;
-            _appSettings = options.Value;
         }
 
         public async Task<IActionResult> Index(string? id, CancellationToken ct)
@@ -28,7 +25,7 @@ namespace AnagramSolver.WebApp.Controllers
             {
                 cleanId = id.Replace(" ", "").ToLower();
                 model.userInput = cleanId;
-                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, _appSettings.MinOutputWordLength, ct)).ToList();
+                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, ct)).ToList();
             }
             return View(model);
         }
