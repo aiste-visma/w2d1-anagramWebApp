@@ -13,12 +13,22 @@
     <button type="submit">Ieškoti</button>
 </form>
 
+<p>Search history: </p>
+    <ul>
+        @foreach (var search in ViewBag.History)
+        {
+            <li>@search</li>
+        }
+    </ul>
+
+<p>Last search: @ViewBag.LastSearch</p>
+
+<p>Anagrams: </p>
     <ul>
         @foreach (var anagram in Model.anagrams)
         {
             <li>@anagram</li>
         }
-
     </ul>
     
 </div>

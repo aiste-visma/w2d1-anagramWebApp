@@ -3,6 +3,7 @@ using AnagramSolver.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace AnagramSolver.WebApp.Controllers
 {
@@ -19,14 +20,34 @@ namespace AnagramSolver.WebApp.Controllers
 
         public async Task<IActionResult> Index(string? id, CancellationToken ct)
         {
+            var historyJson = HttpContext.Session.GetString("searchHistory");
+            List<string> history;
+            if (historyJson != null)
+            {
+                history = JsonSerializer.Deserialize<List<string>>(historyJson);
+            }
+            else
+            {
+                history = new List<string>();
+            }
+
             var model = new AnagramViewModel();
             string cleanId;
             if (!string.IsNullOrWhiteSpace(id))
             {
+                Response.Cookies.Append("lastSearch", id, new CookieOptions{
+                    Expires = DateTimeOffset.Now.AddDays(2)
+                });
                 cleanId = id.Replace(" ", "").ToLower();
                 model.userInput = cleanId;
                 model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, ct)).ToList();
+                
+                history.Add(id);
+                HttpContext.Session.SetString("searchHistory", JsonSerializer.Serialize(history));
             }
+            var lastSearch = Request.Cookies["lastSearch"];
+            ViewBag.LastSearch = lastSearch;
+            ViewBag.History = history;
             return View(model);
         }
 
