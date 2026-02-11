@@ -18,7 +18,7 @@ namespace AnagramSolver.WebApp.Controllers
         public async Task<ActionResult<IEnumerable<string>>> Get(string word)
         {
             var cancellationToken = HttpContext.RequestAborted;
-            var anagrams = await _solver.GetAnagramsAsync(word, cancellationToken);
+            var anagrams = await _solver.GetAnagramsAsync(word, Console.WriteLine, cancellationToken);
             return Ok(anagrams);
         }
     }

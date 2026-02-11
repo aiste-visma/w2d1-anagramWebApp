@@ -21,7 +21,7 @@ namespace AnagramSolver.Tests
 
 
             var temp = new MultipleAnagramFinder(repositoryMock.Object, options);
-            await temp.GetAnagramsAsync("test", ct);
+            await temp.GetAnagramsAsync("test", Console.WriteLine, ct);
 
             repositoryMock.Verify(r => r.GetDictionary(ct), Times.Once);
         }
@@ -36,7 +36,7 @@ namespace AnagramSolver.Tests
             repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "berti", "rūkas" });
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
-            var result = await finder.GetAnagramsAsync("klanas", ct);
+            var result = await finder.GetAnagramsAsync("klanas", Console.WriteLine, ct);
 
             result.Should().Equal(new List<string> { "kalnas" });
 
@@ -53,7 +53,7 @@ namespace AnagramSolver.Tests
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
 
-            var result = await finder.GetAnagramsAsync("vienas", ct);
+            var result = await finder.GetAnagramsAsync("vienas", Console.WriteLine, ct);
 
             result.Should().BeEmpty();
         }
@@ -69,7 +69,7 @@ namespace AnagramSolver.Tests
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
 
-            var result = await finder.GetAnagramsAsync("kalnas", ct);
+            var result = await finder.GetAnagramsAsync("kalnas", Console.WriteLine, ct);
 
             result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
         }
@@ -85,7 +85,7 @@ namespace AnagramSolver.Tests
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
 
-            var result = await finder.GetAnagramsAsync("KLANAS", ct);
+            var result = await finder.GetAnagramsAsync("KLANAS", Console.WriteLine, ct);
 
             result.Should().Equal(new List<string> { "kalnas" });
         }
@@ -102,7 +102,7 @@ namespace AnagramSolver.Tests
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
 
-            var result = await finder.GetAnagramsAsync("klanas", ct);
+            var result = await finder.GetAnagramsAsync("klanas", Console.WriteLine, ct);
 
             result.Should().BeEquivalentTo(new List<string> { "kalnas", "kas lan" });
 
@@ -118,7 +118,7 @@ namespace AnagramSolver.Tests
             repositoryMock.Setup(r => r.GetDictionary(ct)).ReturnsAsync(new List<string> { "kalnas", "kas", "lan", "rūkas" });
 
             var finder = new MultipleAnagramFinder(repositoryMock.Object, options);
-            var results = await finder.GetAnagramsAsync("klanas", ct);
+            var results = await finder.GetAnagramsAsync("klanas", Console.WriteLine, ct);
 
             results.Should().Equal(new List<string> { "kalnas" });
         }

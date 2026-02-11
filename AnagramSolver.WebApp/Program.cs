@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
-builder.Services.AddScoped<IAnagramSolver, MultipleAnagramFinder>();
+builder.Services.AddTransient<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
+builder.Services.AddSingleton<IAnagramSolver, MultipleAnagramFinder>();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 builder.Services.AddEndpointsApiExplorer();

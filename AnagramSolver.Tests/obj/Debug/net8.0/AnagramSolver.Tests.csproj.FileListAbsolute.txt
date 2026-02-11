@@ -119,3 +119,7 @@ C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\De
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Tests\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

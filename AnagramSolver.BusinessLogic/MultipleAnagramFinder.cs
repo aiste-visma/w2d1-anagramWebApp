@@ -13,20 +13,28 @@ namespace AnagramSolver.BusinessLogic
     {
         private IWordRepository _WordRepository;
         private AppSettings _appSettings;
+        private MemoryCache<List<string>> _cache;
 
         public MultipleAnagramFinder(IWordRepository repo, IOptions<AppSettings> options)
         {
 
             _WordRepository = repo;
             _appSettings = options.Value;
+            _cache = new MemoryCache<List<string>>();
         }
 
-        public async Task<IList<string>> GetAnagramsAsync(string userInput, CancellationToken ct)
+        public async Task<IList<string>> GetAnagramsAsync(string userInput, Action<string> logger,
+            CancellationToken ct)
         {
             var dictionary = await _WordRepository.GetDictionary(ct);
             LetterBag bag = new LetterBag(userInput);
             var currentSolution = new List<string>();
             var result = new List<string>();
+
+            if(_cache.TryGet(userInput, out var cacheResult))
+            {
+                return cacheResult;
+            }
 
             var filteredDic = new List<string>();
             foreach (string word in dictionary)
@@ -37,13 +45,15 @@ namespace AnagramSolver.BusinessLogic
                 }
             }
 
-            FindAnagrams(bag, currentSolution, filteredDic, 0, result, ct);
+            FindAnagrams(bag, currentSolution, filteredDic, 0, result, logger, ct);
+            _cache.AddToCache(userInput, result);
             return result;
         }
 
 
         private void FindAnagrams(LetterBag bag, List<string> solution, 
-            List<string> dict, int startIndex, List<string> results, CancellationToken ct)
+            List<string> dict, int startIndex, List<string> results, 
+            Action<string> logger,CancellationToken ct)
         {
             if (ct.IsCancellationRequested)
             {
@@ -53,6 +63,7 @@ namespace AnagramSolver.BusinessLogic
             if (bag.IsEmpty)
             {
                 string anagram = string.Join(" ", solution);
+                logger($"logging: Found anagram '{anagram}'");
                 results.Add(anagram);
                 return;
             }
@@ -67,7 +78,7 @@ namespace AnagramSolver.BusinessLogic
                 bag.RemoveWord(word);
                 solution.Add(word);
 
-                FindAnagrams(bag, solution, dict, i, results, ct);
+                FindAnagrams(bag, solution, dict, i, results,logger, ct);
 
                 solution.RemoveAt(solution.Count - 1);
                 bag.AddWord(word);

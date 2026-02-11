@@ -40,7 +40,7 @@ namespace AnagramSolver.WebApp.Controllers
                 });
                 cleanId = id.Replace(" ", "").ToLower();
                 model.userInput = cleanId;
-                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, ct)).ToList();
+                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, Console.WriteLine,ct)).ToList();
                 
                 history.Add(id);
                 HttpContext.Session.SetString("searchHistory", JsonSerializer.Serialize(history));

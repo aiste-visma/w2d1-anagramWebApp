@@ -51,6 +51,7 @@ class Program {
             Console.WriteLine(anagram);
             anagramCount++;
         }
+
         Console.WriteLine("Press Enter to exit...");
         Console.ReadLine();
     }
