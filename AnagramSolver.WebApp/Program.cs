@@ -7,7 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
-builder.Services.AddSingleton<IAnagramSolver, MultipleAnagramFinder>();
+
+builder.Services.AddSingleton<MultipleAnagramFinder>();
+builder.Services.AddSingleton<IAnagramSolver>(provider =>
+{
+    var solver = provider.GetRequiredService<MultipleAnagramFinder>();
+    var solverCached = new AnagramCacheDecorator(solver);
+    var solverLogged = new AnagramLoggingDecorator(solverCached);    
+    return solverLogged;
+});
+builder.Services.AddSingleton<InputValidationPipeline>();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 builder.Services.AddEndpointsApiExplorer();

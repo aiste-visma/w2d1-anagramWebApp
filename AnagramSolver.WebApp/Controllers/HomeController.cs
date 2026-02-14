@@ -1,3 +1,4 @@
+using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts;
 using AnagramSolver.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,13 @@ namespace AnagramSolver.WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IAnagramSolver _anagramSolver;
+        private InputValidationPipeline _validationPipeline;
 
-        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver)
+        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver, InputValidationPipeline pipeline)
         {
             _logger = logger;
             _anagramSolver = anagramSolver;
+            _validationPipeline = pipeline;
         }
 
         public async Task<IActionResult> Index(string? id, CancellationToken ct)
@@ -32,19 +35,26 @@ namespace AnagramSolver.WebApp.Controllers
             }
 
             var model = new AnagramViewModel();
-            string cleanId;
-            if (!string.IsNullOrWhiteSpace(id))
+
+            string cleanId = (id ?? "").Replace(" ", "").ToLower();
+            try
             {
-                Response.Cookies.Append("lastSearch", id, new CookieOptions{
+                await _validationPipeline.Execute(cleanId);
+                Response.Cookies.Append("lastSearch", id, new CookieOptions
+                {
                     Expires = DateTimeOffset.Now.AddDays(2)
                 });
-                cleanId = id.Replace(" ", "").ToLower();
                 model.userInput = cleanId;
-                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, Console.WriteLine,ct)).ToList();
-                
+                model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, Console.WriteLine, ct)).ToList();
+
                 history.Add(id);
                 HttpContext.Session.SetString("searchHistory", JsonSerializer.Serialize(history));
+                }
+            catch (ArgumentException ex)
+            {
+                ViewBag.ValidationError = ex.Message;
             }
+
             var lastSearch = Request.Cookies["lastSearch"];
             ViewBag.LastSearch = lastSearch;
             ViewBag.History = history;

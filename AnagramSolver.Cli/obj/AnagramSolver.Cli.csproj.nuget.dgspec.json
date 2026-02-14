@@ -11,7 +11,7 @@
         "projectName": "AnagramSolver.BusinessLogic",
         "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -86,7 +86,7 @@
         "projectName": "AnagramSolver.Cli",
         "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Cli\\AnagramSolver.Cli.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Cli\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Cli\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
