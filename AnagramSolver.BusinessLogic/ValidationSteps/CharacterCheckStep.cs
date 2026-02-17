@@ -12,12 +12,9 @@ namespace AnagramSolver.BusinessLogic.ValidationSteps
         private string allowedCharacters = "aąbcčdeęėfghiįyjklmnoprsštuvzž";
         public Task Handle(string userInput, Func<Task> next)
         {
-            foreach (char c in userInput)
+            if (!userInput.All(c => allowedCharacters.Contains(c)))
             {
-                if (!allowedCharacters.Contains(c))
-                {
-                    throw new ArgumentException("Invalid character in input.");
-                }
+                throw new ArgumentException("Invalid character in input.");
             }
             return next();
         }

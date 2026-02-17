@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AnagramSolver.BusinessLogic
@@ -13,17 +14,8 @@ namespace AnagramSolver.BusinessLogic
         public LetterBag(string userInput)
         {
             char[] userLetters = userInput.ToLower().ToArray();
-            foreach (char letter in userLetters)
-            {
-                if (wordLetters.ContainsKey(letter))
-                {
-                    wordLetters[letter]++;
-                }
-                else
-                {
-                    wordLetters[letter] = 1;
-                }
-            }
+            wordLetters = userLetters.GroupBy(c => c)
+                .ToDictionary(letter => letter.Key, count => count.Count());
         }
 
         public bool CanWordForm(string word)

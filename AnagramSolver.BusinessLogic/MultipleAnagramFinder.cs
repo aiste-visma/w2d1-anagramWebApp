@@ -30,13 +30,8 @@ namespace AnagramSolver.BusinessLogic
             var result = new List<string>();
 
             var filteredDic = new List<string>();
-            foreach (string word in dictionary)
-            {
-                if (bag.CanWordForm(word) && word.Length >= _appSettings.MinOutputWordLength)
-                {
-                    filteredDic.Add(word);
-                }
-            }
+            filteredDic = dictionary.Where(word => bag.CanWordForm(word) &&
+            word.Length >= _appSettings.MinOutputWordLength).ToList();
 
             FindAnagrams(bag, currentSolution, filteredDic, 0, result, logger, ct);
             return result;

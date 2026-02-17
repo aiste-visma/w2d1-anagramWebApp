@@ -43,14 +43,15 @@ class Program {
         var json = await response.Content.ReadAsStringAsync();
         var anagrams = JsonSerializer.Deserialize<List<string>>(json);
 
-        var anagramCount = 0;
-        foreach (var anagram in anagrams)
-        { 
-            if (anagramCount >= settings.MaxAnagramCount)
-                break;
+        var countedAnagrams = anagrams.Take(settings.MaxAnagramCount);
+        foreach (var anagram in countedAnagrams)
+        {
             Console.WriteLine(anagram);
-            anagramCount++;
         }
+
+        //CancellationToken ct = new CancellationToken();
+        //var dictionaryActions = new LINQwithDictionary(zodynas);
+        //await dictionaryActions.LINQoperations(ct);
 
         Console.WriteLine("Press Enter to exit...");
         Console.ReadLine();
