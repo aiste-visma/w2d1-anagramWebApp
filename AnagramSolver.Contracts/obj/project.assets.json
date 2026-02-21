@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
       "projectName": "AnagramSolver.Contracts",
-      "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
+      "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
       "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\obj\\",
+      "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

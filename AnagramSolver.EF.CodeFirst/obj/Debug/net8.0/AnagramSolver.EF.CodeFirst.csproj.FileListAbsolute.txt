@@ -1,0 +1,15 @@
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.deps.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.runtimeconfig.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.csproj.AssemblyReference.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.AssemblyInfoInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.AssemblyInfo.cs
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.sourcelink.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\refint\AnagramSolver.EF.CodeFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\AnagramSolver.EF.CodeFirst.genruntimeconfig.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.CodeFirst\obj\Debug\net8.0\ref\AnagramSolver.EF.CodeFirst.dll

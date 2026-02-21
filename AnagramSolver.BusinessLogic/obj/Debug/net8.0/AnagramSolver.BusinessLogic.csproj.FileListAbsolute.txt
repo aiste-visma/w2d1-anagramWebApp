@@ -14,3 +14,5 @@ C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogi
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.pdb
 C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\ref\AnagramSolver.BusinessLogic.dll
 C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.BusinessLogic\obj\Debug\net8.0\AnagramSolver.BusinessLogic.sourcelink.json
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.BusinessLogic\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.pdb

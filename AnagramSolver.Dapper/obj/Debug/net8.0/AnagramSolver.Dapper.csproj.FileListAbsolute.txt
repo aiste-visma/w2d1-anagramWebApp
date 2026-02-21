@@ -1,0 +1,16 @@
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.csproj.AssemblyReference.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.AssemblyInfoInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.AssemblyInfo.cs
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.csproj.CoreCompileInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.sourcelink.json
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\bin\Debug\net8.0\AnagramSolver.Dapper.deps.json
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\bin\Debug\net8.0\AnagramSolver.Dapper.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\bin\Debug\net8.0\AnagramSolver.Dapper.pdb
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\bin\Debug\net8.0\AnagramSolver.EF.CodeFirst.pdb
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramS.0F3DA4E5.Up2Date
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\refint\AnagramSolver.Dapper.dll
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\AnagramSolver.Dapper.pdb
+C:\Users\aiste.makutenaite\source\repos\anagramSolver\AnagramSolver.Dapper\obj\Debug\net8.0\ref\AnagramSolver.Dapper.dll

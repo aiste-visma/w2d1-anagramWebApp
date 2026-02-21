@@ -1,0 +1,15 @@
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\bin\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.deps.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\bin\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.runtimeconfig.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\bin\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\bin\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.csproj.AssemblyReference.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.AssemblyInfoInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.AssemblyInfo.cs
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.csproj.CoreCompileInputs.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.sourcelink.json
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\refint\AnagramSolver.EF.DatabaseFirst.dll
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.pdb
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\AnagramSolver.EF.DatabaseFirst.genruntimeconfig.cache
+C:\Users\aiste.makutenaite\source\repos\AnagramSolver\AnagramSolver.EF.DatabaseFirst\obj\Debug\net8.0\ref\AnagramSolver.EF.DatabaseFirst.dll

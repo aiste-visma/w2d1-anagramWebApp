@@ -2,6 +2,9 @@
   <Project Path="AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" />
   <Project Path="AnagramSolver.Cli/AnagramSolver.Cli.csproj" />
   <Project Path="AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" />
+  <Project Path="AnagramSolver.Dapper/AnagramSolver.Dapper.csproj" Id="db533547-373b-4698-9efe-4b802a04d793" />
+  <Project Path="AnagramSolver.EF.CodeFirst/AnagramSolver.EF.CodeFirst.csproj" Id="b28e0b02-6e21-4a2e-b541-1ad505f22456" />
+  <Project Path="AnagramSolver.EF.DatabaseFirst/AnagramSolver.EF.DatabaseFirst.csproj" Id="63239aa0-106c-4da6-afa5-1823fffab596" />
   <Project Path="AnagramSolver.Tests/AnagramSolver.Tests.csproj" Id="883aadfc-06bf-479b-ad5b-40c794951ddd" />
   <Project Path="AnagramSolver.WebApp/AnagramSolver.WebApp.csproj" Id="e17775ec-978d-4b85-9e7e-2c715ead9871" />
   <Project Path="Helpers.TestingTemp/Helpers.TestingTemp.csproj" Id="23761b83-4803-4c9e-8946-787260d753da" />
