@@ -1,5 +1,6 @@
 using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts;
+using AnagramSolver.EF.CodeFirst.Models;
 using AnagramSolver.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -13,12 +14,14 @@ namespace AnagramSolver.WebApp.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IAnagramSolver _anagramSolver;
         private InputValidationPipeline _validationPipeline;
+        private readonly AnagramDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver, InputValidationPipeline pipeline)
+        public HomeController(ILogger<HomeController> logger, IAnagramSolver anagramSolver, InputValidationPipeline pipeline, AnagramDbContext context)
         {
             _logger = logger;
             _anagramSolver = anagramSolver;
             _validationPipeline = pipeline;
+            _context = context;
         }
 
         public async Task<IActionResult> Index(string? id, CancellationToken ct)
@@ -46,6 +49,13 @@ namespace AnagramSolver.WebApp.Controllers
                 });
                 model.userInput = cleanId;
                 model.anagrams = (await _anagramSolver.GetAnagramsAsync(cleanId, Console.WriteLine, ct)).ToList();
+                var newLog = new SearchLog
+                {
+                    SearchText = cleanId,
+                    SearchedAt = DateTime.Now
+                };
+                _context.SearchLogs.Add(newLog);
+                await _context.SaveChangesAsync();
 
                 history.Add(id);
                 HttpContext.Session.SetString("searchHistory", JsonSerializer.Serialize(history));

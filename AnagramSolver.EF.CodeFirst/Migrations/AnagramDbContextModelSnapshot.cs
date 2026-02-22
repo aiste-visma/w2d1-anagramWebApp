@@ -39,6 +39,26 @@ namespace AnagramSolver.EF.CodeFirst.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("AnagramSolver.EF.CodeFirst.Models.SearchLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("SearchText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SearchedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SearchLogs");
+                });
+
             modelBuilder.Entity("AnagramSolver.EF.CodeFirst.Models.Word", b =>
                 {
                     b.Property<int>("Id")

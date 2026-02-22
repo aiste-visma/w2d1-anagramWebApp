@@ -1,15 +1,20 @@
-using AnagramSolver.Contracts;
 using AnagramSolver.BusinessLogic;
+using AnagramSolver.Contracts;
+using AnagramSolver.EF.CodeFirst.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddTransient<IWordRepository>(_ =>new WordRepository("zodynas.txt"));
 
-builder.Services.AddSingleton<MultipleAnagramFinder>();
-builder.Services.AddSingleton<IAnagramSolver>(provider =>
+builder.Services.AddDbContext<AnagramDbContext>(options =>
+    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=AnagramSolver_CF;Trusted_Connection=True;TrustServerCertificate=True;"));
+builder.Services.AddTransient<IWordRepository, BdWordRepository>();
+
+builder.Services.AddScoped<MultipleAnagramFinder>();
+builder.Services.AddScoped<IAnagramSolver>(provider =>
 {
     var solver = provider.GetRequiredService<MultipleAnagramFinder>();
     var solverCached = new AnagramCacheDecorator(solver);
