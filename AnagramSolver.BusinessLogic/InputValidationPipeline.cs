@@ -14,6 +14,7 @@ namespace AnagramSolver.BusinessLogic
         private LengthCheckStep lengthCheckStep;
         private CharacterCheckStep characterCheckStep;
 
+        //
         public InputValidationPipeline() 
         {
             emptyCheckStep = new EmptyCheckStep();

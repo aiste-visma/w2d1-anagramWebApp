@@ -30,7 +30,7 @@ namespace AnagramSolver.WebApp.Controllers
             List<string> history;
             if (historyJson != null)
             {
-                history = JsonSerializer.Deserialize<List<string>>(historyJson);
+                history = JsonSerializer.Deserialize<List<string>>(historyJson)!;
             }
             else
             {
@@ -43,7 +43,7 @@ namespace AnagramSolver.WebApp.Controllers
             try
             {
                 await _validationPipeline.Execute(cleanId);
-                Response.Cookies.Append("lastSearch", id, new CookieOptions
+                Response.Cookies.Append("lastSearch", id!, new CookieOptions
                 {
                     Expires = DateTimeOffset.Now.AddDays(2)
                 });
@@ -57,7 +57,7 @@ namespace AnagramSolver.WebApp.Controllers
                 _context.SearchLogs.Add(newLog);
                 await _context.SaveChangesAsync();
 
-                history.Add(id);
+                history!.Add(id!);
                 HttpContext.Session.SetString("searchHistory", JsonSerializer.Serialize(history));
                 }
             catch (ArgumentException ex)

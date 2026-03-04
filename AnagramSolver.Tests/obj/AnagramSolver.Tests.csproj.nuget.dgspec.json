@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj": {}
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
         "projectName": "AnagramSolver.BusinessLogic",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
               },
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj"
               }
             }
           }
@@ -57,9 +57,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "Microsoft.SemanticKernel": {
+              "target": "Package",
+              "version": "[1.72.0, )"
             }
           },
           "imports": [
@@ -82,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
         "projectName": "AnagramSolver.Contracts",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -147,14 +155,14 @@
         }
       }
     },
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj",
         "projectName": "AnagramSolver.EF.CodeFirst",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\AnagramSolver.EF.CodeFirst.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.CodeFirst\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.CodeFirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -230,14 +238,14 @@
         }
       }
     },
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj",
         "projectName": "AnagramSolver.Tests",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Tests\\AnagramSolver.Tests.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Tests\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -258,14 +266,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj"
               },
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
               },
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj"
               }
             }
           }
@@ -331,14 +339,14 @@
         }
       }
     },
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj",
         "projectName": "AnagramSolver.WebApp",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\AnagramSolver.WebApp.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.WebApp\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -359,11 +367,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.BusinessLogic\\AnagramSolver.BusinessLogic.csproj"
               },
-              "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
-                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
+              "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj": {
+                "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.Contracts\\AnagramSolver.Contracts.csproj"
               }
             }
           }
@@ -384,6 +392,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.2, )"

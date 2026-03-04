@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj": {}
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj": {
+    "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj",
+        "projectUniqueName": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj",
         "projectName": "AnagramSolver.EF.DatabaseFirst",
-        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj",
+        "projectPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.DatabaseFirst\\AnagramSolver.EF.DatabaseFirst.csproj",
         "packagesPath": "C:\\Users\\aiste.makutenaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\anagramSolver\\AnagramSolver.EF.DatabaseFirst\\obj\\",
+        "outputPath": "C:\\Users\\aiste.makutenaite\\source\\repos\\AnagramSolver\\AnagramSolver.EF.DatabaseFirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

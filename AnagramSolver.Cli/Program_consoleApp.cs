@@ -20,6 +20,12 @@ class Program
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.UTF8;
 
+        // Initialize database with words from zodynas.txt (call once, then comment out)
+        // var context = new AnagramDbContext();
+        // IWordRepository repository = new DbWordRepository(context);
+        // var initializer = new WordsDatabaseInitializer(repository);
+        // await initializer.InitializeDatabaseWithWordsAsync("zodynas.txt");
+
         //AppSettings settings = LoadAppSettings.FromJson("appsettings.json");
         //var zodynas = new WordRepository("zodynas.txt");
 
@@ -63,7 +69,7 @@ class Program
         var database = new EFcoreQuereis(context);
 
         //database.AddToCategories();
-        //database.AddToWords();
+        database.AddToWords();
         //database.AddNewWord("bekategoris");
 
         //database.WordsWithCategories();

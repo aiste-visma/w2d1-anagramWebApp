@@ -10,7 +10,6 @@ namespace AnagramSolver.BusinessLogic
     public class LetterBag
     {
         private Dictionary<char, int> wordLetters = new();
-
         public LetterBag(string userInput)
         {
             char[] userLetters = userInput.ToLower().ToArray();

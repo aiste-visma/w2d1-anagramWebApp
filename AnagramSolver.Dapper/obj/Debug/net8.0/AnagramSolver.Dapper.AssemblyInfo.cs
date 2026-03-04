@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnagramSolver.Dapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33486715488e847f72750c416e6be7d3fb8ffd5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b243121b52ff30db26edca9f7a7ffc0a1943819")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnagramSolver.Dapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnagramSolver.Dapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
