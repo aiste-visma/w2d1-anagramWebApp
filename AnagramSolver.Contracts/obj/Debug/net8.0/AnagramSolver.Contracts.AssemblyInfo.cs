@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnagramSolver.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b243121b52ff30db26edca9f7a7ffc0a1943819")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b49bc5457c4d3002e4de864033e6a003b769d967")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnagramSolver.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnagramSolver.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

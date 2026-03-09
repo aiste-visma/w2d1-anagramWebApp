@@ -42,6 +42,7 @@ builder.Services.AddScoped<Kernel>(sp =>
 });
 
 builder.Services.AddScoped<IAiChatService, AiChatService>();
+builder.Services.AddTransient<IFrequencyAnalysisService, FrequencyAnalysisService>();
 builder.Services.AddSingleton<InputValidationPipeline>();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 

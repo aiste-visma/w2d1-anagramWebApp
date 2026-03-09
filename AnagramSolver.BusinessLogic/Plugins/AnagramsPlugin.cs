@@ -6,9 +6,11 @@ public class AnagramPlugin
 {
     private readonly IAnagramSolver _anagramSolver;
 
+
     public AnagramPlugin(IAnagramSolver anagramSolver)
     {
         _anagramSolver = anagramSolver;
+        
     }
 
     [KernelFunction]

@@ -1,0 +1,18 @@
+// {
+//   "servers": {
+//     "filesystem": {
+//       "type": "stdio",
+//       "command": "npx",
+//       "args": ["-y", "@modelcontextprotocol/server-filesystem",
+//                "${workspaceFolder}"]
+//     },
+//     "playwright": {
+//       "type": "stdio",
+//       "command": "npx",
+//       "args": [
+//         "-y",
+//         "@playwright/mcp@latest"
+//       ]
+//     }
+//   }
+// }
